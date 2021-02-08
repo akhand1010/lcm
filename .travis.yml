@@ -20,9 +20,6 @@ addons:
 
 jobs:
     include:
-        - name: "OS X"
-          os: osx
-
         - name: "Ubuntu 16.04 / amd64"
           os: linux
           dist: xenial
@@ -36,12 +33,16 @@ jobs:
         - name: "Ubuntu 16.04 / arm64"
           os: linux
           dist: xenial
-          arch: arm64
+          arch: arm64-graviton2
+          virt: lxd
+          group: edge
 
         - name: "Ubuntu 18.04 / arm64"
           os: linux
           dist: bionic
-          arch: arm64
+          arch: arm64-graviton2
+          virt: lxd
+          group: edge
 
 
 script:
